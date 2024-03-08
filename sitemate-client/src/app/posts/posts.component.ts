@@ -4,8 +4,6 @@ import { PostsService } from '../services/posts.service';
 
 @Component({
   selector: 'app-posts',
-  standalone: true,
-  imports: [], 
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.scss'],
 })
