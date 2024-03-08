@@ -1,1 +1,23 @@
-<p>posts works!</p>
+<div class="posts-container">
+    <h2>Posts</h2>
+    
+    <div>
+      <label>Title:
+        <input #titleInput>
+      </label>
+      <label>Content:
+        <textarea #contentInput></textarea>
+      </label>
+      <button (click)="add(titleInput.value, contentInput.value); titleInput.value=''; contentInput.value=''">
+        Add Post
+      </button>
+    </div>
+  
+    <ul>
+      <li *ngFor="let post of posts">
+        <p><strong>{{ post.title }}</strong>: {{ post.content }}</p>
+        <button (click)="delete(post)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

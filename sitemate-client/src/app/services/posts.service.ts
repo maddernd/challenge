@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Post } from './post';
+import { Post } from '../services/model/post'; 
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { Post } from './post';
 export class PostsService {
 
   // URL to rails app
-  
+
   private postsUrl = 'http://localhost:3000/posts'; 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
